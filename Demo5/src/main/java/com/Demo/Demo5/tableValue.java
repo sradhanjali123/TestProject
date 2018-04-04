@@ -10,6 +10,11 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 
+/**
+ * This is the demo project
+ * @author ADMIN
+ *
+ */
 @Entity(name="Country")
 @Table(name="COUNTRY")
 public class tableValue {
