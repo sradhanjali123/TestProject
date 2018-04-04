@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+ http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+	<persistence-unit name="count">
+		 <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> 
+		<class>com.Demo.Demo5.tableValue</class>
+		<properties>
+			<!-- <property name="hibernate.connection.provider_class"
+				value=" org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider" /> -->
+			<property name="hibernate.archive.autodetection" value="class, hbm" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+			<property name="javax.persistence.jdbc.user" value="subha" />
+			<property name="javax.persistence.jdbc.password" value="subha" />
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<!-- <property name="hibernate.connection.pool_size" value="100" /> -->
+			<!-- Configuring Connection Pool -->
+			<property name="hibernate.c3p0.min_size" value="5" />
+			<property name="hibernate.c3p0.max_size" value="100" />
+			<property name="hibernate.c3p0.timeout" value="200" />
+			<property name="hibernate.c3p0.max_statements" value="20" />
+			<property name="hibernate.c3p0.idle_test_period" value="800" />
+
+			<property name="hibernate.c3p0.acquire_increment" value="1" />
+			<property name="hibernate.connection.release_mode" value="after_statement" />
+
+			<property name="debugUnreturnedConnectionStackTraces" value="true" />
+			
+			<!-- batching size -->
+            <property name="hibernate.jdbc.batch_size" value="15"/>
+            <property name="hibernate.order_inserts" value="true"/>
+            <property name="hibernate.order_updates" value="true"/>
+            <property name="hibernate.order_updates" value="true"/>
+            <property name="hibernate.jdbc.batch_versioned_data" value="true"/>
+		</properties>
+	</persistence-unit>
+</persistence>
