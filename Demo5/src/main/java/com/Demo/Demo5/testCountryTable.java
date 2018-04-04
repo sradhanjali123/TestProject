@@ -61,6 +61,8 @@ public class testCountryTable {
 //		           e.setCapital(capit);
 //		           e.setFlag(flag);
 				 entityManager.persist(e);
+				 System.out.println("total_country: " + enums.size());
+				 
 		                
 			 }
 			 entityManager.flush();
